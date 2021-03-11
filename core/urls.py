@@ -23,7 +23,11 @@ urlpatterns = [
     path('prapatra/', views.prapatra, name="prapatra"),
     path('rajpatra/', views.rajpatra, name="rajpatra"),
     path('5680/', views.niyu, name="5680"),
+
+    path('rankfg/',views.rankfg,name="rankfg"),
+    path('rankforester/', views.rankforester, name="rankforester"),
     path('rankaro/', views.rankaro, name="rankaro"),
+
     path('undercons/', views.undercons, name="undercons"),
 
     path('calcform/', views.calcform, name="calcform"),
@@ -39,5 +43,8 @@ urlpatterns = [
 
     path('dfoletter/',views.dfoletter, name="dfoletter"),
     path('ccfletter/',views.ccfletter, name='ccfletter'),
+    path('pccfletter',views.pccfletter, name='pccfletter'),
+    path('hardasanghletter',views.hardasanghletter, name="hardasanghletter"),
+    path('bhopalsanghletter',views.bhopalsanghletter, name="bhopalsanghletter"),
 ]
 

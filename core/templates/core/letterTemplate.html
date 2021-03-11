@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contents %}
+<h1 class="text-center"><u>{{heading}}</u></h1>
+<table class="table table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>क्रमांक</td>
+            <th>विषय</td>
+            <th>पृष्‍ठांकन क्रमांक</td>
+            <th>दिनांक</td>
+            <th>डाउनलोड</td>
+        </tr>
+    </thead>
+    {% for df in  data %}    
+        <tr>
+            <td></td>
+            <td>{{df.title}}</td>
+            <td></td>
+            <td></td>
+            <td>{{df.file}}</td>
+        </tr>
+    {% endfor %}
+ </table>
+{% endblock contents %}

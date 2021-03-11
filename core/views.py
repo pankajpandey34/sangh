@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from core.models import vetan5680
+from core.models import vetan5680,pdffile
 from .forms import Uploadpdf
 
 
@@ -7,18 +7,21 @@ from .forms import Uploadpdf
 def home(request):
     return render (request, 'core/index.html',{'name':'Pankaj'})
 
-def prapatra(request):
-    return render(request,'core/prapatra.html')
+def niyu(request):
+    emp=vetan5680.objects.all()
+    return render(request,'core/5680.html',{'em':emp})
 
-def rajpatra(request):
-    return render(request,'core/rajpatra.html')
+def rankfg(request):
+    heading="वनरक्षक की पदक्रम सूची"
+    return render(request,'core/RankingListTemplate.html',{'heading':heading})
 
-# def niyu(request):
-#     emp=vetan5680.objects.all()
-#     return render(request,'core/5680.html',{'em':emp})
+def rankforester(request):
+    heading="वनपाल की पदक्रम सूची"
+    return render(request,'core/RankingListTemplate.html',{'heading':heading})
 
 def rankaro(request):
-    return render(request,'core/rankaro.html')
+    heading="उपवनक्षेत्रपाल की पदक्रम सूची"
+    return render(request,'core/RankingListTemplate.html',{'heading':heading})
 
 def undercons(request):
     return render(request,'core/undercons.html')
@@ -56,30 +59,51 @@ def fileupload(request):
             tit =fm.cleaned_data['title']
             filee=fm.cleaned_data['file']
             link=fm.cleaned_data['linkto']
-            print(tit)
-            print(filee)
-            print(link)
+            fm.save()
     else:
         fm=Uploadpdf()
     return render(request, 'core/uploadpdf.html',{'form':fm})
 
-# def imageupload(request):
-#     if request.method == 'POST':
-#         fm= imageupload(request.POST)
-#         # fields=['title','image','linkto']
-#         if fm.is_valid():
-#             tit =fm.cleaned_data['title']
-#             filee=fm.cleaned_data['file']
-#             link=fm.cleaned_data['linkto']
-#             print(tit)
-#             print(filee)
-#             print(link)
-#     else:
-#         fm=Uploadpdf()
-#     return render(request, 'core/uploadimage.html',{'form':fm})
+def imageupload(request):
+    if request.method == 'POST':
+        fm= imageupload(request.POST)
+        # fields=['title','image','linkto']
+        if fm.is_valid():
+            tit =fm.cleaned_data['title']
+            filee=fm.cleaned_data['file']
+            link=fm.cleaned_data['linkto']
+            fm.save()
+    else:
+        fm=Uploadpdf()
+    return render(request, 'core/uploadimage.html',{'form':fm})
 
 def dfoletter(request):
-    return render(request,'core/dfoletter.html')
+    heading="वनमंडल के पत्र"
+    data=pdffile.objects.filter(linkto="DfoLetter")
+    return render(request,'core/letterTemplate.html',{'heading':heading,'data':data})
 
 def ccfletter(request):
-    return render(request,'core/ccfletter.html')
+    heading="मुख्‍य वनसंरक्षक के पत्र"
+    data=pdffile.objects.filter(linkto="CcfLetter")
+    return render(request,'core/letterTemplate.html',{'heading':heading,'data':data})
+
+def pccfletter(request):
+    heading="प्रधान मुख्‍य वनसंरक्षक के पत्र"
+    data=pdffile.objects.filter(linkto="PccfLetter")
+    return render(request,'core/letterTemplate.html',{'heading':heading,'data':data})
+
+def hardasanghletter(request):
+    heading="वन कर्मचारी संघ हरदा के पत्र"
+    data=pdffile.objects.filter(linkto="HardaSanghLetter")
+    return render(request,'core/letterTemplate.html',{'heading':heading,'data':data})
+
+def bhopalsanghletter(request):
+    heading="वन कर्मचारी संघ भोपाल के पत्र"
+    data=pdffile.objects.filter(linkto="BhopalSanghLetter")
+    return render(request,'core/letterTemplate.html',{'heading':heading,'data':data})
+
+def prapatra(request):
+    return render(request,'core/prapatra.html')
+
+def rajpatra(request):
+    return render(request,'core/rajpatra.html')
