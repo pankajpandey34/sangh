@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contents %}
+<h1 class="text-center"><u>फेंसिग कार्य</u></h1>
+<br>
+    <form action="fancingout">    
+        <div class="offset-3">
+            <div class="row">
+                <div class="col-sm-3">
+                    <label class="">फेंसिंग की लंबाई :</label>
+                </div>
+                <div class="col-sm-3">
+                    <input type="text" class="" name="basic" id="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label class="">फेंसिंग की प्रकार :</label>
+                </div>
+                <div class="col-sm-3">
+                    <select name="fantype" id="fantype">
+                        <option value="barbedWire">कांटेदार तार</option>
+                        <option value="chainlink">चेनलिंक जाली</option>      
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label class="">कांटेदर तार की लाईन संख्‍या : </label>
+                </div>
+                <div class="col-sm-3">
+                    <input type="number" id="quantity" name="quantity" min="1" max="10">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label class="">चेनलिंक जाली की ऊंचाई : </label>
+                </div>
+                <div class="col-sm-3">
+                    <select name="fantype" id="fantype">
+                        <option value="1">1 मीटर</option>
+                        <option value="1.5">1.5 मीटर</option> 
+                        <option value="2">2 मीटर</option> 
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label class="">पोल की संख्‍या : </label>
+                </div>
+                <div class="col-sm-3">
+                    <input type="text" name="year" class="" id="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label class="">अतिरिक्‍त पोल प्रतिशत : </label>
+                </div>
+                <div class="col-sm-3">
+                    <input type="number" id="quantity" name="quantity" min="1" max="15">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label class="">गढ्ढों का आकार : </label>   
+                </div>
+                <div class="col-sm-3">
+                    <select name="fantype" id="fantype">
+                        <option value="barbedWire">30 X 30 X 45</option>
+                        <option value="chainlink">30 X 30 X 30</option>  
+                    </select>
+                </div> 
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label class="">मटेरियल का अनुपात (सिमेंट : रेत : गिट्टी) : </label>
+                </div>                       
+                <div class="col-sm-3">
+                    <select name="fantype" id="fantype">
+                        <option value="barbedWire">1 : 2 : 3</option>
+                        <option value="chainlink">1 : 2 : 4</option>      
+                        <option value="chainlink">1 : 3 : 6</option>      
+                    </select>
+                </div>  
+            </div>  
+            <div class="row"> 
+                <div class="col-sm-6">
+                    <input class="btn btn-outline-success btn-block"type="submit" value="Submit">  
+                </div>  
+            </div>
+        </div>                     
+    </form>
+<hr>
+{% endblock contents %}

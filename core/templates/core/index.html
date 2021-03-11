@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contents %}
+    <marquee bgcolor="green" style="color:white;" behavior="" direction="">{% include 'marquee.py' %}
+        </marquee>
+        <main>
+            <div class="row">               
+                    <div class="col-sm-9">
+                        {% include 'carousel.py' %}    
+                    </div>             
+                <div class="col-sm-3">
+                    <div class="container">   
+                <div class="panel-group">
+                    <div class="panel panel-primary">
+                    <div class="panel-heading">लोकसूचना</div>
+                <div class="panel-body">
+                    <ul id="flash">
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>&nbsp;&nbsp;NPS के विरूद्ध युद्ध</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>&nbsp;&nbsp;वेतन में भेदभाव</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>&nbsp;&nbsp;वन कर्मचारी संघ भोपाल के पत्र</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>&nbsp;&nbsp;वन कर्मचारी संघ हरदा के पत्र</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>&nbsp;&nbsp;राष्‍ट्रीय उद्यान / अभ्‍यारण्‍य में भ्रमण</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>&nbsp;&nbsp;कृषि वानिकी</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>&nbsp;&nbsp;अनुसंधान विस्‍तार</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>&nbsp;&nbsp;अनुसंधान विस्‍तार</a></li>
+                    </ul>
+                </div> 
+                <div class="panel-footer" style="text-align:right";><a href="#">अधिक...</a> </div>            
+            </div>    
+         </div>    
+                </div>
+                </div>
+            </div> 
+            <br>  
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                       <img src={% static '/images/1.jfif' %} alt="" class="img-fluid img-thumbnail">
+                    </div>
+                    <div class="col-sm-3">
+                       <img src={% static '/images/1.jfif' %} alt="" class="img-fluid img-thumbnail">
+                    </div>
+                    <div class="col-sm-3">
+                        <img src={% static '/images/1.jfif' %} alt="" class="img-fluid img-thumbnail">
+                    </div>
+                    <div class="col-sm-3">
+                        <img src={% static '/images/1.jfif' %} alt="" class="img-fluid img-thumbnail">
+                    </div>
+                </div>
+            </div>           
+            <hr/>
+        </main>
+{% endblock contents %}

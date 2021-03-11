@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contents %}
+<h1 class="text-center"><u>ग्रेच्‍युटी</u></h1>
+<table class="table table-hover">
+    <tr>
+        <td>ग्रेच्‍युटी राशि</td>       
+        <td>{{grad}}</td>
+    </tr>
+    <tr>
+        <td>करमुक्‍त राशि</td>       
+        <td>{{taxfree}}</td>
+    </tr>
+    <tr>
+        <td>करयोग्‍य राशि</td>      
+        <td>{{taxamt}}</td>
+    </tr>
+</table>
+
+{% endblock contents %}

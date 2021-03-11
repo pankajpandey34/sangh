@@ -1,0 +1,146 @@
+*{
+    margin: 0PX;
+    padding: 0px;
+}
+:root{
+    --maincolor:#f75e16;
+    /* --maincolor:green; */
+ } 
+ .banner-text{
+     color: chartreuse;
+     position:absolute;
+     top: 210px;
+     left: 320px;
+     line-height: 40px;
+     
+ }
+ .nav-bg-color{
+    background-color: var(--maincolor); 
+ }
+ .mega-menu{width: 800px; overflow: hidden;padding: 10px;}
+ .wrapper{
+     width: 1340px;    
+     background-color:#f3f3e5;
+     margin: 0  auto;
+ }
+ .top-header{
+     height: 30px;
+     background-color: var(--maincolor);
+     font-size: small;       
+ }
+ .top-header a{
+     text-decoration: none;
+     color: white;
+     padding: 3px;    
+ }
+ .top-header a:hover{
+     text-decoration: underline;
+ }
+ #search{
+     margin: 4px 4px auto 100px;
+ }
+ .banner img{
+     width: 100%;   
+ }
+ .caresual{
+     margin-top: 10px;
+ }
+ 
+ .module-head{       
+     border: 1px solid grey;
+     background-color: white;
+     float: left;        
+ }
+ 
+ .center {
+     display: block;
+     margin-left: auto;
+     margin-right: auto; 
+     border: white solid 10px;
+   }
+
+.footer-top{
+     padding: 7px;
+     margin:0px;
+     background-color: var(--maincolor);  
+    
+ }
+
+ #box1 li{
+     list-style: none;
+ }
+ .footer-top li a{
+     text-decoration: none;
+     color: white;   
+     display: block; 
+ }
+ .footer-top li{
+      list-style: none;
+      border-bottom: 1px solid white;    
+      padding-top: 7px;
+      font-size: small;
+ }
+ .footer-top li a:hover{     
+     transition: all;
+     transition-duration: 0.2s;
+     transition-timing-function: ease-in;
+     transition-delay: 0s;
+     font-size: 1.05em;  
+     color: black;  
+ }
+ h4, h3{
+     color: white;
+     margin-left: 40px;
+ }
+ .foot-4 p{
+     color: white;
+     font-size: small;
+ }
+ .footer-bottom{
+     background-color: var(--maincolor);
+     color: blanchedalmond;
+ }
+ .footer-bottom p{
+     text-align: center;
+     font-size: small;
+ }
+ .header .top-header .fa-search{
+     color: white;
+ }
+ .head-link{
+     float:right;
+     padding-right: 250px;
+     line-height: 30px;
+ }
+ .module-context{
+     background-color: white;    
+     text-align: left;
+ }
+ .module-context ul a{
+     text-decoration: none;
+     text-align: left;   
+     line-height: 30px;
+     color: green;
+ }
+ .module-context ul{
+     list-style: none;
+ }
+ .module-context ul li{
+     border-bottom: 1px solid grey;
+ }
+ .module-head p{
+     background-color: var(--maincolor);
+     text-align: center;  
+     font-size: 1.4em;  
+     font-weight: bold;
+     color: white;
+     height: 50px;   
+     line-height: 50px;    
+ }
+ #box1 a:hover{
+     text-decoration: underline;        
+ }
+ #newspaper{
+    width:250;
+    height: 250;
+ }

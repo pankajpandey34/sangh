@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contents %}
+<h1 class="text-center"><u>उपवनक्षेत्रपाल के पदक्रम सूची</u></h1>
+<table class="table table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>वर्ष</td>
+            <th>डाउनलोड</td>
+        </tr>
+    </thead>
+    <tr>
+        <td>2016</td>
+        <td><a class="dropdown-item" target="_blank" href="{% static '/download/emprank/Dy Ranger/Govt_Dy_Ranger_2016.pdf' %}"><i class="fa fa-download"></i></a></td>
+    </tr>
+    <tr>
+        <td>2017</td>
+        <td><a class="dropdown-item" target="_blank" href="{% static '/download/emprank/Dy Ranger/Govt_Dy_Ranger_2017.pdf' %}"><i class="fa fa-download"></i></a></td>
+    </tr>
+    <tr>
+        <td>2018</td>
+        <td><a class="dropdown-item" target="_blank" href="{% static '/download/emprank/Dy Ranger/Govt_Dy_Ranger_2018.pdf' %}"><i class="fa fa-download"></i></a></td>
+    </tr>
+    <tr>
+        <td>2019</td>
+        <td><a class="dropdown-item" target="_blank" href="{% static '/download/emprank/Dy Ranger/Govt_Dy_Ranger_2019.pdf' %}"><i class="fa fa-download"></i></a></td>
+    </tr>
+    <tr>
+        <td>2020</td>
+        <td><a class="dropdown-item" target="_blank" href="{% static '/download/emprank/Dy Ranger/Govt_Dy_Ranger_2020.pdf' %}"><i class="fa fa-download"></i></a></td>
+    </tr>    
+</table>
+{% endblock contents %}

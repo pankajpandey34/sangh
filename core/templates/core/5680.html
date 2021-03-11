@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contents %}
+
+<h1 class="text-center"><u>नियुक्ति दिनांक से 1900 ग्रेड पे से वंचित कर्मचारियों की सूची</u></h1>
+<table class="table table-hover">
+    <thead class="table-dark">
+        <tr>
+    <tr>
+      <th class="tg-0pky">क्र.</th>
+      <th class="tg-0pky">कर्मचारी का नाम</th>
+      <th class="tg-0pky">जन्‍मतिथि</th>
+      <th class="tg-0pky">नियुक्ति वर्ष</th>
+      <th class="tg-0pky">वनमंडल</th>
+      <th class="tg-0pky">परिक्षेत्र</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% if em %}
+      {% for e in em %}
+        <tr>
+          <td class="tg-brdm">{{e.id}}</td>
+          <td class="tg-brdm">{{e.name}}</td>
+          <td class="tg-brdm">{{e.dob}}</td>
+          <td class="tg-brdm">{{e.empyear}}</td>
+          <td class="tg-brdm">{{e.division_id}}</td>
+          <td class="tg-brdm">{{e.range_id}}</td>
+        </tr> 
+      {% endfor %}
+      
+    {% endif %}
+       
+  </tbody>
+</table>
+{% endblock contents %}

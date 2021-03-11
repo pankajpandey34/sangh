@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contents %}
+<h1 class="text-center"><u>मुख्‍य वनसंरक्षक के पत्र</u></h1>
+<table class="table table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>क्रमांक</td>
+            <th>विषय</td>
+            <th>डाउनलोड</td>
+        </tr>
+    </thead>
+  
+    {% for df in  ccf %}    
+        <tr>
+            {% comment %} <td>{{count}}</td> {% endcomment %}
+            <td>{{df.title}}</td>            
+            <td><a target="_blank" href="{{df.file}}"><i class="fa fa-download"></i></a></td>
+        </tr>
+        
+    {% endfor %}
+ </table>
+{% endblock contents %}

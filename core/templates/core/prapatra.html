@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contents %}
+<h2>Upload File  <a href="{% url 'fileupload' %}"><i class="fa fa-upload" aria-hidden="true"></i></a></h2>
+<h1 class="text-center"><u>प्रपत्र</u></h1>
+<table class="table table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>प्रपत्र</td>
+            <th>डाउनलोड</td>
+        </tr>
+    </thead>
+    <tr>
+        <td>गिरफ्तारी पंचनामा</td>
+        <td><a class="dropdown-item" target="_blank" href="{% static '/download/prapatra/Giraftari panchnama.pdf' %}"><i class="fa fa-download"></i></a></td>
+    </tr>
+    <tr>
+        <td>अपराधी की सामान्‍य जानकारी</td>
+        <td><a class="dropdown-item" target="_blank" href="{% static '/download/prapatra/offender.pdf' %}"><i class="fa fa-download"></i></a></td>
+    </tr>
+    <tr>
+        <td>कार्यवाही का तख्‍ता</td>
+        <td><a class="dropdown-item" target="_blank" href="{% static '/download/prapatra/takhta.pdf' %}"><i class="fa fa-download"></i></a></td>
+    </tr>
+    <tr>
+        <td>गणना पत्रक</td>
+        <td><a class="dropdown-item" target="_blank" href="{% static '/download/prapatra/gannapatrak.pdf' %}"><i class="fa fa-download"></i></a></td>
+    </tr>
+    <tr>
+        <td>जब्‍तीनामा 1927</td>
+        <td><a class="dropdown-item" target="_blank" href="{% static '/download/prapatra/jabtinama1927.pdf' %}"><i class="fa fa-download"></i></a></td>
+    </tr>
+    <tr>
+        <td>जब्‍तीनामा 1969</td>
+        <td><a class="dropdown-item" target="_blank" href="{% static '/download/prapatra/jabtinama1969.pdf' %}"><i class="fa fa-download"></i></a></td>
+    </tr>
+    <tr>
+        <td>जब्‍तीनामा 1972</td>
+        <td><a class="dropdown-item" target="_blank" href="{% static '/download/prapatra/jabtinama1972.pdf' %}"><i class="fa fa-download"></i></a></td>
+    </tr>
+    <tr>
+        <td>ज्‍यूडिशियल रिमांड</td>
+        <td><a class="dropdown-item" target="_blank" href="{% static '/download/prapatra/jr.pdf' %}"><i class="fa fa-download"></i></a></td>
+    </tr>
+    <tr>
+        <td>पीओआर फाईडिंग मुख्‍य पृष्‍ठ</td>
+        <td><a class="dropdown-item" target="_blank" href="{% static '/download/prapatra/porfinding1.pdf' %}"><i class="fa fa-download"></i></a></td>
+    </tr>
+    <tr>
+        <td>पीओआर फाईडिंग अंतिम पृष्‍ठ</td>
+        <td><a class="dropdown-item" target="_blank" href="{% static '/download/prapatra/porfinding2.pdf' %}"><i class="fa fa-download"></i></a></td>
+    </tr>
+    <tr>
+        <td>मुचलका</td>
+        <td><a class="dropdown-item" target="_blank" href="{% static '/download/prapatra/muchalka.pdf' %}"><i class="fa fa-download"></i></a></td>
+    </tr>
+    <tr>
+        <td>सुपुर्दनामा</td>
+        <td><a class="dropdown-item" target="_blank" href="{% static '/download/prapatra/supurdnama.pdf' %}"><i class="fa fa-download"></i></a></td>
+    </tr>
+</table>
+{% endblock contents %}

@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contents %}
+<h1 class="text-center"><u>गोलाई वार गोशवारा</u></h1>
+<hr>
+<table class="table table-bordered">
+    <tr>
+        <td>21/ 30</td>
+        <td>31/ 40</td>
+        <td>41/ 50</td>
+        <td>51/ 60</td>
+        <td>61/ 70</td>
+        <td>71/ 80</td>
+        <td>81/ 90</td>
+        <td>91/ 100</td> 
+        <td>101/ 110</td>
+        <td>111/ 120</td>
+        <td>121/ 130</td>
+        <td>131/ 140</td>
+        <td>141/ 150</td>
+        <td>151/ 160</td>
+        <td>161/ 170</td>
+        <td>171/ 180</td>
+        <td>181/ 190</td>
+        <td>191/ 200</td>
+        <td>201/ 210</td>
+        <td>211 से अधिक</td>
+        <td>योग</td>        
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>    
+</table>
+<div class="row">
+    <div class="col-sm-3">
+        <table class="table table-bordered">
+            <thead>
+                <td>क्रमांक</td>
+                <td>गोलाई</td>
+            </thead>
+            <tr>
+                <td>1</td>
+                <td>60</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>120</td>
+            </tr>
+        </table>    
+    </div>
+    <div class="col-sm-3">
+        
+        <form action="">
+            <label class="">क्रमांक :</label>
+            <input type="text" class="" name="text1" id="text1"><br>
+            <label class="">गोलाई :</label>
+            <input type="text" class="" name="text2" id="text2">
+            <input type="button" onclick = "calcu()" class="btn btn-outline-success" value="जोड़े"/>
+
+        </form>
+        <h1 id="ans"></h1>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function calcu()
+    {
+        var a = document.getElementById("text1").value;        
+        var b = document.getElementById("text2").value;
+        var result =parseFloat(a)+parseFloat(b);
+        
+        if (!isNaN(result))
+        {
+            document.getElementById("ans").innerHTML="The Answer is "+result;
+            )
+        }
+    }
+</script>
+{% endblock contents %}

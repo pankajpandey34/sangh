@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contents %}
+
+    <form action="calcu">           
+        <label class="form-label">मूल वेतन प्रतिमाह :</label><br>
+        <input type="text" class="form-control" name="basic" id="">
+        <label class="form-label">वर्ष : </label><br>
+        <input type="text" name="year" class="form-control" id=""><br>        
+        <input class="btn btn-outline-success btn-block"type="submit" value="Submit">        
+    </form>
+
+<br><hr>
+
+{% endblock contents %}
