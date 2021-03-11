@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block contents %}
-<h1 class="text-center"><u>{{heading}}</u></h1>
-<table class="table table-hover">
+<h1 class="alert-danger text-center"><u>{{heading}}</u></h1>
+<table class="table table-hover shadow">
     <thead class="table-dark">
         <tr>
             <th>क्रमांक</td>
@@ -16,9 +16,9 @@
         <tr>
             <td></td>
             <td>{{df.title}}</td>
-            <td></td>
-            <td></td>
-            <td>{{df.file}}</td>
+            <td>{{df.javak}}</td>
+            <td>{{df.date}}</td>
+            <td><a href="{{df.file.url}}"><i class="fa fa-download" style="font-size:24px;color:red"></a></i></td>
         </tr>
     {% endfor %}
  </table>

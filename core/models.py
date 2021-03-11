@@ -69,6 +69,8 @@ range_choice=(
 ################################# Start Upload PDF File ##########################################
 class pdffile(models.Model):
     title = models.CharField(max_length=100)
+    javak=models.CharField(max_length=200,null=True,blank=True)
+    date=models.DateField(null=True,blank=True)
     file = models.FileField(upload_to='pdf')
     linkto =models.CharField(choices=pdf_choice,max_length=100)
 

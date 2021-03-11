@@ -38,7 +38,7 @@ urlpatterns = [
 
     path('gurthwise/', views.gurthwise,name="gurthwise"),
 
-    path('uploadpdf/',views.fileupload, name="uploadpdf"),
+    path('uploadpdf/',views.fileupload.as_view(), name="uploadpdf"),
     path('uploadimage/',views.imageupload, name="uploadimage"),
 
     path('dfoletter/',views.dfoletter, name="dfoletter"),

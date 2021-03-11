@@ -28,5 +28,5 @@ admin.site.register(vetan5680,emp)
 
 
 class pdffiler(admin.ModelAdmin):    
-    list_display=['title','linkto','file']    
+    list_display=['title','javak','date','linkto','file']    
 admin.site.register(pdffile, pdffiler)

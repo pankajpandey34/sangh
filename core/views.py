@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from core.models import vetan5680,pdffile
 from .forms import Uploadpdf
+from django.views import View
+from django.http import HttpResponse, HttpResponseRedirect
+from django.urls import reverse
 
 
 # Create your views here.
@@ -51,18 +54,28 @@ def fancingout(request):
 def gurthwise(request):
     return render(request,'core/gurthwise.html')
 
-def fileupload(request):
-    if request.method == 'POST':
-        fm= Uploadpdf(request.POST)
-        # fields=['title','file','linkto']
+# def fileupload(request):
+#     if request.method == 'POST':
+#         fm= Uploadpdf(request.POST)
+#         # fields=['title','file','linkto']
+#         if fm.is_valid():
+#             tit =fm.cleaned_data['title']
+#             filee=fm.cleaned_data['file']
+#             link=fm.cleaned_data['linkto']
+#             fm.save()
+#     else:
+#         fm=Uploadpdf()
+#     return render(request, 'core/uploadpdf.html',{'form':fm})
+
+class fileupload(View):
+    def get(self, request):
+        fm = Uploadpdf()
+        return render(request,'core/uploadpdf.html',{'form':fm})
+    def post(self, request):
+        fm = Uploadpdf(request.POST, request.FILES)
         if fm.is_valid():
-            tit =fm.cleaned_data['title']
-            filee=fm.cleaned_data['file']
-            link=fm.cleaned_data['linkto']
             fm.save()
-    else:
-        fm=Uploadpdf()
-    return render(request, 'core/uploadpdf.html',{'form':fm})
+            return HttpResponseRedirect('../') 
 
 def imageupload(request):
     if request.method == 'POST':
