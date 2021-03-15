@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib.auth.forms import UserCreationForm
 from core.models import vetan5680,pdffile
 from .forms import Uploadpdf
 from django.views import View
@@ -120,3 +121,12 @@ def prapatra(request):
 
 def rajpatra(request):
     return render(request,'core/rajpatra.html')
+
+def signup(request):
+    if request.method=="POST":
+        fm= UserCreationForm(request.POST)
+        if fm.is_valid():
+            fm.save()
+    else:
+        fm = UserCreationForm()
+    return render(request,'core/signup.html',{'form':fm})
