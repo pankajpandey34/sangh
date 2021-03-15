@@ -1,6 +1,9 @@
 from django.core import validators
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
 from django import forms
 from django.db.models import fields
+from django.forms import widgets
 from .models import pdffile
 from core import models
 
@@ -14,3 +17,11 @@ class Uploadpdf(forms.ModelForm):
                 'date':forms.DateInput(attrs={'class':'form-control','id':'datepicker'}),
                 'linkto':forms.Select(attrs={'class':'form-control'}),
         }
+
+class SignUpForm(UserCreationForm):
+    # password1= forms.CharField(label='पासवर्ड')
+    class Meta:
+        model=User
+        fields=['username','first_name','last_name','email']
+        labels={'username':'युजर का नाम','first_name':'प्रथम नाम','last_name':'उपनाम','email':'ईमेल'}
+       
