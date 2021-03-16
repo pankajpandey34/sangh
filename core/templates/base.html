@@ -6,31 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>:: वन कर्मचारी संघ-हरदा ::</title>
     <link rel="stylesheet" href={% static '/css/style.css' %} >
-    <link rel="icon" href={% static '/images/icon.png' %}>    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    {% comment %} <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> {% endcomment %}
+    <link rel="icon" href={% static '/images/icon.png' %}>   
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href={% static '/css/bootstrap.css' %}>
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
 </head>
 <body>
     <div class="container-fluid wrapper">
         <header>
             {% include 'topheader.py' %}            
-            <div class="banner">
-                <h4 class="banner-text"><marquee behavior="" direction="">कुछ तो लोग कहेंगें लोगों का काम है कहना</marquee></h4>
-                <img src={% static '/images/banner.png' %} alt="">                               
-                
+            <div class="banner">           
+                <img src={% static '/images/banner.png' %} alt=""> 
             </div>
             
         </header>
         <div class="container"> 
+<<<<<<< HEAD
 {% comment %} nav code start {% endcomment %}
            
                 <nav class="navbar navbar-expand-lg navbar-light style{background-color: :{% url 'undercons' %}f75e16}">
@@ -168,6 +161,10 @@
 
         
                        
+=======
+           {% include 'nav.py' %}
+            <hr>       
+>>>>>>> origin/home
             {% block contents %}{% endblock contents %}
         </div>
         
@@ -178,19 +175,26 @@
     <script src="{% static '/js/jquery.js' %}"></script>
     <script src="{% static '/js/popper.js' %}"></script>
     <script src="{% static '/js/bootstrap.js' %}"></script>
-    {% comment %} <script src="{% static '/js/jquery.bootstrap.newsbox.js' %}"></script> {% endcomment %}
-    {% comment %} <script>
-        $(document).ready(function(){
-            $('#flash').bootstrapNews();
-        });
-    </script> {% endcomment %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-     <script>
+    {% comment %} <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>  {% endcomment %}
+    <script src="https://www.jqueryscript.net/demo/Flexible-Customizable-jQuery-News-Ticker-Plugin-Easy-Ticker/jquery.easy-ticker.js"></script>
+
+    <script>
         $( function() {
             $( "#datepicker" ).datepicker();
         } );
+    </script>
+
+     <script type="text/javascript">
+        $('.ticker-wrapper').easyTicker({
+            direction: 'up',
+            easing: 'swing',
+            visible: 5,
+            mousePause:1
+        });
     </script>
 </body>
 </html>

@@ -1,6 +1,11 @@
 from django.shortcuts import render
+<<<<<<< HEAD
 from core.models import vetan5680,pdffile
 from .forms import Uploadpdf,SignUpForm
+=======
+from core.models import vetan5680,pdffile,imagefile
+from .forms import Uploadpdf
+>>>>>>> origin/home
 from django.views import View
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
@@ -11,8 +16,8 @@ def home(request):
     return render (request, 'core/index.html',{'name':'Pankaj'})
 
 def niyu(request):
-    emp=vetan5680.objects.all()
-    return render(request,'core/5680.html',{'em':emp})
+    # emp=vetan5680.objects.all()
+    return render(request,'core/5680.html')
 
 def rankfg(request):
     heading="वनरक्षक की पदक्रम सूची"
@@ -54,19 +59,6 @@ def fancingout(request):
 def gurthwise(request):
     return render(request,'core/gurthwise.html')
 
-# def fileupload(request):
-#     if request.method == 'POST':
-#         fm= Uploadpdf(request.POST)
-#         # fields=['title','file','linkto']
-#         if fm.is_valid():
-#             tit =fm.cleaned_data['title']
-#             filee=fm.cleaned_data['file']
-#             link=fm.cleaned_data['linkto']
-#             fm.save()
-#     else:
-#         fm=Uploadpdf()
-#     return render(request, 'core/uploadpdf.html',{'form':fm})
-
 class fileupload(View):
     def get(self, request):
         fm = Uploadpdf()
@@ -77,18 +69,15 @@ class fileupload(View):
             fm.save()
             return HttpResponseRedirect('../') 
 
-def imageupload(request):
-    if request.method == 'POST':
-        fm= imageupload(request.POST)
-        # fields=['title','image','linkto']
+class imageupload(View):
+    def get(self, request):
+        fm = imagefile()
+        return render(request,'core/uploadimage.html',{'form',fm})
+    def post(self, request):
+        fm=imagefile(request.POST, request.FILES)
         if fm.is_valid():
-            tit =fm.cleaned_data['title']
-            filee=fm.cleaned_data['file']
-            link=fm.cleaned_data['linkto']
             fm.save()
-    else:
-        fm=Uploadpdf()
-    return render(request, 'core/uploadimage.html',{'form':fm})
+            return HttpResponseRedirect('../')
 
 def dfoletter(request):
     heading="वनमंडल के पत्र"
@@ -121,6 +110,7 @@ def prapatra(request):
 def rajpatra(request):
     return render(request,'core/rajpatra.html')
 
+<<<<<<< HEAD
 def signup(request):
     if request.method=="POST":
         fm= SignUpForm(request.POST)
@@ -130,3 +120,6 @@ def signup(request):
         fm = SignUpForm()
     return render(request,'core/signup.html',{'form':fm})
 #kya
+=======
+# kuch bhi
+>>>>>>> origin/home
