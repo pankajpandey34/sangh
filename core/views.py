@@ -129,3 +129,4 @@ def signup(request):
     else:
         fm = SignUpForm()
     return render(request,'core/signup.html',{'form':fm})
+#kya
