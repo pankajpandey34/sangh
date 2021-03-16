@@ -70,7 +70,7 @@ range_choice=(
 class pdffile(models.Model):
     title = models.CharField(max_length=100)
     javak=models.CharField(max_length=200,null=True,blank=True)
-    date=models.DateField(null=True,blank=True)
+    date=models.DateField()
     file = models.FileField(upload_to='pdf')
     linkto =models.CharField(choices=pdf_choice,max_length=100)
 
@@ -79,8 +79,9 @@ class pdffile(models.Model):
 ################################# Start Upload Image File ##########################################
 class imagefile(models.Model):
     title = models.CharField(max_length=100)
+    # date=models.DateField(null=True,blank=True)
     file = models.ImageField(upload_to='img')
-    linkto =models.CharField(choices=pdf_choice,max_length=100)
+    linkto =models.CharField(choices=image_choice,max_length=100)
     # def __str__(self):
     #     return self.linkto
 ################################# End Upload Image File ##########################################
@@ -91,4 +92,8 @@ class vetan5680(models.Model):
     division=models.CharField(choices=division_choice, max_length=100)
     range=models.CharField(choices=range_choice, max_length=100)
     
-    
+class loksuchna(models.Model):
+    title=models.CharField(max_length=100)
+    detail=models.TextField()
+    username=models.CharField(max_length=100)
+    suchnadate=models.DateField(auto_now_add=True)

@@ -6,14 +6,7 @@
     --maincolor:#f75e16;
     /* --maincolor:green; */
  } 
- .banner-text{
-     color: chartreuse;
-     position:absolute;
-     top: 210px;
-     left: 320px;
-     line-height: 40px;
-     
- }
+
  .nav-bg-color{
     background-color: var(--maincolor); 
  }
@@ -36,16 +29,12 @@
  .top-header a:hover{
      text-decoration: underline;
  }
- #search{
-     margin: 4px 4px auto 100px;
- }
  .banner img{
-     width: 100%;   
+     width: 100%;        
  }
  .caresual{
      margin-top: 10px;
- }
- 
+ } 
  .module-head{       
      border: 1px solid grey;
      background-color: white;
@@ -62,8 +51,7 @@
 .footer-top{
      padding: 7px;
      margin:0px;
-     background-color: var(--maincolor);  
-    
+     background-color: var(--maincolor);      
  }
 
  #box1 li{
@@ -140,7 +128,7 @@
  #box1 a:hover{
      text-decoration: underline;        
  }
- #newspaper{
-    width:250;
-    height: 250;
- }
+
+
+
+

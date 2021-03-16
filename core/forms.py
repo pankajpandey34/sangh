@@ -1,7 +1,7 @@
 from django.core import validators
 from django import forms
 from django.db.models import fields
-from .models import pdffile
+from .models import pdffile, imagefile
 from core import models
 
 class Uploadpdf(forms.ModelForm):
@@ -14,3 +14,8 @@ class Uploadpdf(forms.ModelForm):
                 'date':forms.DateInput(attrs={'class':'form-control','id':'datepicker'}),
                 'linkto':forms.Select(attrs={'class':'form-control'}),
         }
+
+class uploadimage(forms.ModelForm):
+    class Meta:
+        model = imagefile
+        fields=['title','linkto','file']

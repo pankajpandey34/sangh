@@ -1,5 +1,5 @@
 from django.contrib import admin
-from core.models import vetan5680,pdffile
+from core.models import vetan5680,pdffile,imagefile
 # Register your models here.
 
 # class divi(admin.ModelAdmin):
@@ -30,3 +30,7 @@ admin.site.register(vetan5680,emp)
 class pdffiler(admin.ModelAdmin):    
     list_display=['title','javak','date','linkto','file']    
 admin.site.register(pdffile, pdffiler)
+
+class imagefilee(admin.ModelAdmin):
+    list_display=['title','linkto','file']
+admin.site.register(imagefile, imagefilee)
