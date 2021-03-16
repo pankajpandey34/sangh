@@ -1,14 +1,12 @@
 from django.shortcuts import render
-<<<<<<< HEAD
 from core.models import vetan5680,pdffile
 from .forms import Uploadpdf,SignUpForm
-=======
 from core.models import vetan5680,pdffile,imagefile
 from .forms import Uploadpdf
->>>>>>> origin/home
 from django.views import View
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
+from django.contrib import messages
 
 
 # Create your views here.
@@ -110,16 +108,13 @@ def prapatra(request):
 def rajpatra(request):
     return render(request,'core/rajpatra.html')
 
-<<<<<<< HEAD
 def signup(request):
     if request.method=="POST":
         fm= SignUpForm(request.POST)
         if fm.is_valid():
+            
             fm.save()
+            messages.success(request,'बधाई आपकी आईडी सफलतापूर्वक तैयार हो गई है !!')
     else:
         fm = SignUpForm()
     return render(request,'core/signup.html',{'form':fm})
-#kya
-=======
-# kuch bhi
->>>>>>> origin/home

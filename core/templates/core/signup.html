@@ -1,11 +1,22 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block contents %}
+    <style>
+        .success{
+            color:green;
+        }
+    </style>
     <form action="" method="post">
     {% csrf_token %}
         {% for fm in form %}
             {{fm.label_tag}}{{fm}}{{fm.errors|striptags}}<br>
         {% endfor %}
         <input type="submit" value="Submit">
-    </form>    
+    </form>  
+    {% if messages %}
+        {% for message in messages %}
+            <small {% if message.tags %} class="{{message.tags}}"{% endif %}>{{message}}</small>
+        {% endfor %}
+    {% endif %}  
 {% endblock contents %}
