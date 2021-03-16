@@ -104,3 +104,5 @@ def prapatra(request):
 
 def rajpatra(request):
     return render(request,'core/rajpatra.html')
+
+# kuch bhi
