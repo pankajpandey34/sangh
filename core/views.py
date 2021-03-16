@@ -1,7 +1,6 @@
 from django.shortcuts import render
-from django.contrib.auth.forms import UserCreationForm
 from core.models import vetan5680,pdffile
-from .forms import Uploadpdf
+from .forms import Uploadpdf,SignUpForm
 from django.views import View
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
@@ -124,9 +123,9 @@ def rajpatra(request):
 
 def signup(request):
     if request.method=="POST":
-        fm= UserCreationForm(request.POST)
+        fm= SignUpForm(request.POST)
         if fm.is_valid():
             fm.save()
     else:
-        fm = UserCreationForm()
+        fm = SignUpForm()
     return render(request,'core/signup.html',{'form':fm})
