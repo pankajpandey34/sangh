@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponseRedirect
 from core.models import vetan5680,pdffile
 from .forms import Uploadpdf,SignUpForm
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth import authenticate, login, logout
 from core.models import vetan5680,pdffile,imagefile
 from .forms import Uploadpdf
 from django.views import View
@@ -118,3 +120,20 @@ def signup(request):
     else:
         fm = SignUpForm()
     return render(request,'core/signup.html',{'form':fm})
+
+def user_login(request):
+    if request.method =='POST':
+        fm=AuthenticationForm(request=request, data=request.POST)
+        if fm.is_valid():
+            uname=fm.changed_data['username']
+            upass=fm.cleaned_data['password']
+            user = authenticate(username=uname,password=upass)
+            return HttpResponseRedirect('/profile/')
+            if user is not None:
+                login(request,user)
+    else:
+        fm=AuthenticationForm()
+    return render(request,'core/userlogin.html',{'form':fm})
+
+def profile(request):
+    return render(request,"core/profile.html")
