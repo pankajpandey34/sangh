@@ -27,7 +27,6 @@ class SignUpForm(UserCreationForm):
         fields=['username','first_name','last_name','email']
         labels={'username':'युजर का नाम','first_name':'प्रथम नाम','last_name':'उपनाम','email':'ईमेल'}
        
-
 class uploadimage(forms.ModelForm):
     class Meta:
         model = imagefile

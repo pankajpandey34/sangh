@@ -67,7 +67,7 @@ class fileupload(View):
         fm = Uploadpdf(request.POST, request.FILES)
         if fm.is_valid():
             fm.save()
-            return HttpResponseRedirect('../') 
+            return HttpResponseRedirect('/uploadpdf/') 
 
 class imageupload(View):
     def get(self, request):
@@ -125,15 +125,16 @@ def user_login(request):
     if request.method =='POST':
         fm=AuthenticationForm(request=request, data=request.POST)
         if fm.is_valid():
-            uname=fm.changed_data['username']
+            uname=fm.cleaned_data['username']
             upass=fm.cleaned_data['password']
-            user = authenticate(username=uname,password=upass)
-            return HttpResponseRedirect('/profile/')
+            user = authenticate(username=uname, password=upass)
             if user is not None:
                 login(request,user)
+                messages.success(request, "सफलतापूर्वक लॉग इन")
+                return HttpResponseRedirect('/profile/')
     else:
         fm=AuthenticationForm()
     return render(request,'core/userlogin.html',{'form':fm})
 
-def profile(request):
+def profile(request):    
     return render(request,"core/profile.html")
