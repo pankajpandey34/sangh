@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href={% static '/css/bootstrap.css' %}>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+    
  
 </head>
 <body>
@@ -42,6 +44,9 @@
     {% comment %} <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>  {% endcomment %}
     <script src="https://www.jqueryscript.net/demo/Flexible-Customizable-jQuery-News-Ticker-Plugin-Easy-Ticker/jquery.easy-ticker.js"></script>
 
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    
+
     <script>
         $( function() {
             $( "#datepicker" ).datepicker();
@@ -55,6 +60,14 @@
             visible: 5,
             mousePause:1
         });
+
     </script>
+    
+    <script>
+        $(document).ready( function () {
+        $('#myTable').DataTable();
+        });
+    </script>
+
 </body>
 </html>

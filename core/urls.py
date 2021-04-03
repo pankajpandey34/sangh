@@ -21,7 +21,8 @@ from core import views
 urlpatterns = [
     path('', views.home, name="home"),  
     path('signup/',views.signup, name="signup"), 
-    path('user_login', views.user_login, name="user_login"),
+    path('user_login/', views.user_login, name="user_login"),
+    path('logout/', views.user_logout, name="logout"),
     path('profile/', views.profile, name="profile"),
 
     path('prapatra/', views.prapatra, name="prapatra"),

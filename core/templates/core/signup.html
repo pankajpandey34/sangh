@@ -7,7 +7,9 @@
             color:green;
         }
     </style>
-    <form action="" method="post" novalidate>
+    <div class="container">
+        <div class="col-lg-5 shadow mx-auto" >
+             <form action="" method="post" novalidate>
     {% csrf_token %}
         {% if form.non_field_errors %}
             {% for error in form.non_field_errors %}
@@ -27,4 +29,8 @@
     {% endif %}  
     
     <button type=""><a href="{% url 'user_login' %}">Login</a></button>
+        </div>
+    
+    </div>
+   
 {% endblock contents %}

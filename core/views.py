@@ -113,8 +113,7 @@ def rajpatra(request):
 def signup(request):
     if request.method=="POST":
         fm= SignUpForm(request.POST)
-        if fm.is_valid():
-            
+        if fm.is_valid():            
             fm.save()
             messages.success(request,'बधाई आपकी आईडी सफलतापूर्वक तैयार हो गई है !!')
     else:
@@ -136,5 +135,9 @@ def user_login(request):
         fm=AuthenticationForm()
     return render(request,'core/userlogin.html',{'form':fm})
 
+def user_logout(request):
+    logout(request)
+    return HttpResponseRedirect('/user_login/')
+
 def profile(request):    
-    return render(request,"core/profile.html")
+    return render(request,"core/profile.html",{'name':request.user})
