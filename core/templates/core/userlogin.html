@@ -6,8 +6,12 @@
         color:red;
     }
     </style>
-    <form action="" method="post" novalidate>
-    {% csrf_token %}
+    <div class="container m-5">
+        <div class="col-lg-5 shadow mx-auto p-0">
+        <div><h1 class="alert alert-primary text-center p-1">Login</h1></div>
+        <div class="p-3">
+            <form action="" method="post" novalidate>
+            {% csrf_token %}
 
         {% if form.non_field_errors %}
             {% for error in form.non_field_errors %}
@@ -18,8 +22,19 @@
         {% for fm in form %}
             {{fm.label_tag}}{{fm}}{{fm.errors|striptags}}<br>
         {% endfor %}
-        <input type="submit" value="Login">
+        <hr>
+            <div class="text-center">
+            <input class="btn btn-primary" type="submit" value="Login">        
+            </div>
+            
+            Not a member <a href="{% url 'signup' %}">Signup now</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#">Forget Password?</a>
+        
     </form>
-    <a href="{% url 'signup' %}">Signup</a>
+    </div>
+        </div>
+    </div>
+    
 
 {% endblock contents %}

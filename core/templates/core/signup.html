@@ -7,8 +7,10 @@
             color:green;
         }
     </style>
-    <div class="container">
-        <div class="col-lg-5 shadow mx-auto" >
+   <div class="container m-3">
+        <div class="col-lg-5 shadow mx-auto p-0">
+        <div><h1 class="alert alert-primary text-center">Sign-up</h1></div>
+        <div class="p-5">
              <form action="" method="post" novalidate>
     {% csrf_token %}
         {% if form.non_field_errors %}
@@ -20,17 +22,20 @@
         {% for fm in form %}
             {{fm.label_tag}}{{fm}}{{fm.errors|striptags}}<br>
         {% endfor %}
-        <input type="submit" value="Submit">
+        <hr>
+        <input class="btn btn-outline-primary btn-lg btn-block" type="submit" value="Submit">
     </form>  
     {% if messages %}
         {% for message in messages %}
             <small {% if message.tags %} class="{{message.tags}}"{% endif %}>{{message}}</small>
         {% endfor %}
     {% endif %}  
-    
-    <button type=""><a href="{% url 'user_login' %}">Login</a></button>
+    <br>
+    <div class="text-center">
+    <a href="{% url 'user_login' %}">Login Now</a>
         </div>
-    
+</div>    
     </div>
+      </div>
    
 {% endblock contents %}

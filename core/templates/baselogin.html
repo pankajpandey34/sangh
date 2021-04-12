@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: वन कर्मचारी संघ-हरदा ::</title>
+    
+    <link rel="icon" href={% static '/images/icon.png' %}> 
+    <link rel="stylesheet" href={% static '/css/stylelogin.css' %} >   
+   
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">    
+    {% comment %} <link rel="stylesheet" href={% static '/css/style.css' %} >
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href={% static '/css/bootstrap.css' %}>
+    <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css'rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.24/af-2.3.5/b-1.7.0/b-colvis-1.7.0/b-html5-1.7.0/b-print-1.7.0/cr-1.5.3/date-1.0.3/kt-2.6.1/datatables.min.css"/>
+    {% endcomment %}
+
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">  
+   
+</head>
+<body>
+    <section id="sidebar">
+        <div class="sidebar-brand">
+            {% comment %} <img src="{% static '/images/sidebarimg.jpg' %}" class="img-responsive"> {% endcomment %}
+            <h2><i class="fa fa-desktop"><span>म.प्र. वन कर्मचारी संघ-हरदा</span></i></h2>
+        </div>
+        <div class="sidebar-menu">
+            <ul>
+                <li><a href="#"><i class="fa fa-desktop"></i><span>मुख्‍य पृष्‍ठ</span></a></li>
+                <li><a href="#"><i class="fa fa-users"></i><span>संघ के पदाधिकारी</span></a></li>
+                <li><a href="#"><i class="fa fa-file"></i><span>उल्‍लेखनीय कार्य</span></a></li>
+                {% if user.is_superuser %}
+                    <li><a href="#"><i class="fa fa-envelope-open"></i><span>आय-व्‍यय लेखा</span></a></li>
+                {% endif %}                
+                <li><a href="#"><i class="fas fa-praying-hands"></i><span>सुझाव / शिकायत</span></a></li>
+                <li><a href="#"><i class="fa fa-user"></i><span>प्रोफाइल</span></a></li>                
+                <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out-alt"></i><span>बंद करें</span></a></li>
+            </ul>
+        </div>
+    </section>
+    <section id="maincontent">
+        <header class="main-header">
+            <div class="header-left">
+                <h2><i class="fa fa-bars"></i></h2>
+            </div>
+            <div class="header-left">
+                <input type="text" class="search-bar" name="search" placeholder="Search hear..." id="">
+                <i class="fa fa-search"></i>
+            </div>
+            <div class="header-left">
+                <img src="{% static '/images/user.png' %}" alt="" class="img-responsive">
+                <h6>नमस्‍कार</h6>
+                <h5>{{name.first_name}} {{name.last_name}}</h5>  
+                <p>Admin</p>              
+            </div>
+            <div class="clear"></div>
+        </header>
+        <div class="clear"></div>
+        <div class="main-content-info container">
+            <div class="card-box">
+                <h2 class="cus-num cus-h">330</h2>
+                <p>सभी सदस्‍य</p>
+            </div>
+            <div class="card-box">
+                <h2 class="cus-num cus-pro">225</h2>
+                <p>सक्रिय सदस्‍य</p>
+            </div>
+            <div class="card-box">
+                <h2 class="cus-num cus-num">105</h2>
+                <p>निशक्रिय सदस्‍य</p>
+            </div>
+            <div class="card-box">
+                <h2 class="cus-num cus-inc">15345</h2>
+                <p>बैंक मे जमा राशि</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="content-pro-par container">
+            <div class="pro-table">
+                <div class="recent-pro">
+                    <div class="recent-h">
+                        <h2 class="center">संघ के समस्‍त सदस्‍य</h2>
+                    </div>
+                    {% comment %} <div class="rec-btn">
+                        <button>सभी देखें...</button>
+                    </div> {% endcomment %}
+                    <div class="clear"></div>
+                </div>
+                <table style="width:100%">
+                <tr>
+                    <th>Pic</th>
+                    <th>नाम</th>
+                    <th>पद</th>
+                    <th>पदस्थिति</th>
+                    <th>संपर्क</th>
+                    <th>सदस्‍यता स्थिति</th>
+                </tr>
+                {% for user in userdata %}
+                    <tr>
+                        <td class="td-img"><img src="{% static '/images/user.png' %}" alt=""></td>
+                        <td>{{user.first_name}} {{user.last_name}}</td>
+                        <td>वनरक्षक</td>
+                        <td>मकड़ाई (सामान्‍य)</td>
+                        <td class="td-cnt-i">
+                                <a href="tel:9926059483"><i class="fa fa-phone"></i></a>
+                                <a href="mailto:pankajpandey34@gmail.com"><i class="fa fa-envelope"></i></a>
+                                <a href="#"><i class="fa fa-map-marker"></i></a>
+                        </td>
+                        <td>
+                            <span class="review-span"></span>                            
+                            {{user.is_active}}   
+                           
+                    </tr>
+               {% endfor %}
+                </table>
+            </div>            
+            <div class="clear"></div>
+        </div>
+      
+        </div>
+
+    </section>
+
+
+
+
+    {% comment %} <script src="{% static '/js/jquery.js' %}"></script>
+    <script src="{% static '/js/popper.js' %}"></script>
+    <script src="{% static '/js/bootstrap.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+
+     <script src="https://www.jqueryscript.net/demo/Flexible-Customizable-jQuery-News-Ticker-Plugin-Easy-Ticker/jquery.easy-ticker.js"></script>
+
+    
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+ 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.24/af-2.3.5/b-1.7.0/b-colvis-1.7.0/b-html5-1.7.0/b-print-1.7.0/cr-1.5.3/date-1.0.3/kt-2.6.1/datatables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js"></script>
+
+
+    <script>
+        $( function() {
+            $( "#datepicker" ).datepicker({ dateFormat: 'dd-mm-yy' });            
+        } );
+    </script>
+
+
+
+     <script type="text/javascript">
+        $('.ticker-wrapper').easyTicker({
+            direction: 'up',
+            easing: 'swing',
+            visible: 5,
+            mousePause:1
+        });
+
+    </script>
+    
+    <script>
+        $(document).ready( function () {
+        $('#myTable').DataTable({
+            dom: 'Bfrtip',
+            buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+        });
+        });
+    </script>       {% endcomment %}
+
+</body>
+</html>
+

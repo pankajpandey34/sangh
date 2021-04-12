@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponseRedirect
 from core.models import vetan5680,pdffile
+from django.contrib.auth.models import User
 from .forms import Uploadpdf,SignUpForm
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import authenticate, login, logout
@@ -131,6 +132,7 @@ def user_login(request):
                 login(request,user)
                 messages.success(request, "सफलतापूर्वक लॉग इन")
                 return HttpResponseRedirect('/profile/')
+                # return HttpResponseRedirect('/baselogin.html/')
     else:
         fm=AuthenticationForm()
     return render(request,'core/userlogin.html',{'form':fm})
@@ -139,5 +141,7 @@ def user_logout(request):
     logout(request)
     return HttpResponseRedirect('/user_login/')
 
-def profile(request):    
-    return render(request,"core/profile.html",{'name':request.user})
+def profile(request):   
+    userdata= User.objects.all()
+    
+    return render(request,"core/profile.html",{'name':request.user, 'userdata':userdata})

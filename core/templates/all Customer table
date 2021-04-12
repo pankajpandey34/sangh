@@ -1,0 +1,312 @@
+<div class="content-pro-par container">
+            <div class="pro-table">
+                <div class="recent-pro">
+                    <div class="recent-h">
+                        <h2>संघ के समस्‍त सदस्‍य</h2>
+                    </div>
+                    <div class="rec-btn">
+                        <button>सभी देखें...</button>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <table style="width:100%">
+                <tr>
+                    <th>Project Title</th>
+                    <th>Department</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>Development Team</td>
+                    <td> <span class="review-span"></span> Review</td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>Development Team</td>
+                    <td> <span class="progress-span"></span> In Progress</td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>Development Team</td>
+                    <td> <span class="pending-span"></span> Pending</td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>Development Team</td>
+                    <td> <span class="review-span"></span> Review</td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>Development Team</td>
+                    <td> <span class="progress-span"></span> In Progress</td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>Development Team</td>
+                    <td> <span class="pending-span"></span> Pending</td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>Development Team</td>
+                    <td> <span class="review-span"></span> Review</td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>Development Team</td>
+                    <td> <span class="progress-span"></span> In Progress</td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>Development Team</td>
+                    <td> <span class="pending-span"></span> Pending</td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>Development Team</td>
+                    <td> <span class="review-span"></span> Review</td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>Development Team</td>
+                    <td> <span class="progress-span"></span> In Progress</td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>Development Team</td>
+                    <td> <span class="pending-span"></span> Pending</td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>Development Team</td>
+                    <td> <span class="review-span"></span> Review</td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>Development Team</td>
+                    <td> <span class="progress-span"></span> In Progress</td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>Development Team</td>
+                    <td> <span class="pending-span"></span> Pending</td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>Development Team</td>
+                    <td> <span class="review-span"></span> Review</td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>Development Team</td>
+                    <td> <span class="progress-span"></span> In Progress</td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>Development Team</td>
+                    <td> <span class="pending-span"></span> Pending</td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>Development Team</td>
+                    <td> <span class="review-span"></span> Review</td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>Development Team</td>
+                    <td> <span class="progress-span"></span> In Progress</td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>Development Team</td>
+                    <td> <span class="pending-span"></span> Pending</td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>Development Team</td>
+                    <td> <span class="review-span"></span> Review</td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>Development Team</td>
+                    <td> <span class="progress-span"></span> In Progress</td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>Development Team</td>
+                    <td> <span class="pending-span"></span> Pending</td>
+                </tr>
+
+                </table>
+            </div>
+            <div class="cus-table">               
+                <div class="recent-h">
+                    <h2>All Customers</h2>
+                </div>
+                <div class="rec-btn">
+                    <button>सभी देखें...</button>
+                </div>
+                <table style="width: 100% ;">
+                    <tr>
+                        <th>Pic</th>
+                        <th>Name</th>
+                        <th>Contact</th>
+                    </tr>
+                    <tr>
+                        <td class="td-img"><img src="{% static '/images/user.png' %}" alt=""></td>
+                        <td>Rajesh</td>
+                        <td class="td-cnt-i">
+                            <a href="tel:9926059483"><i class="fa fa-phone"></i></a>
+                            <a href="mailto:pankajpandey34@gmail.com"><i class="fa fa-envelope"></i></a>
+                            <a href="#"><i class="fa fa-map-marker"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-img"><img src="{% static '/images/user.png' %}" alt=""></td>
+                        <td>Rajesh</td>
+                        <td class="td-cnt-i">
+                            <a href="tel:9926059483"><i class="fa fa-phone"></i></a>
+                            <a href="mailto:pankajpandey34@gmail.com"><i class="fa fa-envelope"></i></a>
+                            <a href="#"><i class="fa fa-map-marker"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-img"><img src="{% static '/images/user.png' %}" alt=""></td>
+                        <td>Rajesh</td>
+                        <td class="td-cnt-i">
+                            <a href="tel:9926059483"><i class="fa fa-phone"></i></a>
+                            <a href="mailto:pankajpandey34@gmail.com"><i class="fa fa-envelope"></i></a>
+                            <a href="#"><i class="fa fa-map-marker"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-img"><img src="{% static '/images/user.png' %}" alt=""></td>
+                        <td>Rajesh</td>
+                        <td class="td-cnt-i">
+                            <a href="tel:9926059483"><i class="fa fa-phone"></i></a>
+                            <a href="mailto:pankajpandey34@gmail.com"><i class="fa fa-envelope"></i></a>
+                            <a href="#"><i class="fa fa-map-marker"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-img"><img src="{% static '/images/user.png' %}" alt=""></td>
+                        <td>Rajesh</td>
+                        <td class="td-cnt-i">
+                            <a href="tel:9926059483"><i class="fa fa-phone"></i></a>
+                            <a href="mailto:pankajpandey34@gmail.com"><i class="fa fa-envelope"></i></a>
+                            <a href="#"><i class="fa fa-map-marker"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-img"><img src="{% static '/images/user.png' %}" alt=""></td>
+                        <td>Rajesh</td>
+                        <td class="td-cnt-i">
+                            <a href="tel:9926059483"><i class="fa fa-phone"></i></a>
+                            <a href="mailto:pankajpandey34@gmail.com"><i class="fa fa-envelope"></i></a>
+                            <a href="#"><i class="fa fa-map-marker"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-img"><img src="{% static '/images/user.png' %}" alt=""></td>
+                        <td>Rajesh</td>
+                        <td class="td-cnt-i">
+                            <a href="tel:9926059483"><i class="fa fa-phone"></i></a>
+                            <a href="mailto:pankajpandey34@gmail.com"><i class="fa fa-envelope"></i></a>
+                            <a href="#"><i class="fa fa-map-marker"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-img"><img src="{% static '/images/user.png' %}" alt=""></td>
+                        <td>Rajesh</td>
+                        <td class="td-cnt-i">
+                            <a href="tel:9926059483"><i class="fa fa-phone"></i></a>
+                            <a href="mailto:pankajpandey34@gmail.com"><i class="fa fa-envelope"></i></a>
+                            <a href="#"><i class="fa fa-map-marker"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-img"><img src="{% static '/images/user.png' %}" alt=""></td>
+                        <td>Rajesh</td>
+                        <td class="td-cnt-i">
+                            <a href="tel:9926059483"><i class="fa fa-phone"></i></a>
+                            <a href="mailto:pankajpandey34@gmail.com"><i class="fa fa-envelope"></i></a>
+                            <a href="#"><i class="fa fa-map-marker"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-img"><img src="{% static '/images/user.png' %}" alt=""></td>
+                        <td>Rajesh</td>
+                        <td class="td-cnt-i">
+                            <a href="tel:9926059483"><i class="fa fa-phone"></i></a>
+                            <a href="mailto:pankajpandey34@gmail.com"><i class="fa fa-envelope"></i></a>
+                            <a href="#"><i class="fa fa-map-marker"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-img"><img src="{% static '/images/user.png' %}" alt=""></td>
+                        <td>Rajesh</td>
+                        <td class="td-cnt-i">
+                            <a href="tel:9926059483"><i class="fa fa-phone"></i></a>
+                            <a href="mailto:pankajpandey34@gmail.com"><i class="fa fa-envelope"></i></a>
+                            <a href="#"><i class="fa fa-map-marker"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-img"><img src="{% static '/images/user.png' %}" alt=""></td>
+                        <td>Rajesh</td>
+                        <td class="td-cnt-i">
+                            <a href="tel:9926059483"><i class="fa fa-phone"></i></a>
+                            <a href="mailto:pankajpandey34@gmail.com"><i class="fa fa-envelope"></i></a>
+                            <a href="#"><i class="fa fa-map-marker"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-img"><img src="{% static '/images/user.png' %}" alt=""></td>
+                        <td>Rajesh</td>
+                        <td class="td-cnt-i">
+                            <a href="tel:9926059483"><i class="fa fa-phone"></i></a>
+                            <a href="mailto:pankajpandey34@gmail.com"><i class="fa fa-envelope"></i></a>
+                            <a href="#"><i class="fa fa-map-marker"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-img"><img src="{% static '/images/user.png' %}" alt=""></td>
+                        <td>Rajesh</td>
+                        <td class="td-cnt-i">
+                            <a href="tel:9926059483"><i class="fa fa-phone"></i></a>
+                            <a href="mailto:pankajpandey34@gmail.com"><i class="fa fa-envelope"></i></a>
+                            <a href="#"><i class="fa fa-map-marker"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-img"><img src="{% static '/images/user.png' %}" alt=""></td>
+                        <td>Rajesh</td>
+                        <td class="td-cnt-i">
+                            <a href="tel:9926059483"><i class="fa fa-phone"></i></a>
+                            <a href="mailto:pankajpandey34@gmail.com"><i class="fa fa-envelope"></i></a>
+                            <a href="#"><i class="fa fa-map-marker"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-img"><img src="{% static '/images/user.png' %}" alt=""></td>
+                        <td>Rajesh</td>
+                        <td class="td-cnt-i">
+                            <a href="tel:9926059483"><i class="fa fa-phone"></i></a>
+                            <a href="mailto:pankajpandey34@gmail.com"><i class="fa fa-envelope"></i></a>
+                            <a href="#"><i class="fa fa-map-marker"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-img"><img src="{% static '/images/user.png' %}" alt=""></td>
+                        <td>Rajesh</td>
+                        <td class="td-cnt-i">
+                            <a href="tel:9926059483"><i class="fa fa-phone"></i></a>
+                            <a href="mailto:pankajpandey34@gmail.com"><i class="fa fa-envelope"></i></a>
+                            <a href="#"><i class="fa fa-map-marker"></i></a>
+                        </td>
+                    </tr>
+                    
+                    
+                </table>
+            </div>
+            <div class="clear"></div>
+        </div>

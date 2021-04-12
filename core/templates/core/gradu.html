@@ -1,14 +1,20 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block contents %}
-
+    <div class="conteiner">        
+    <div class="col-lg-5 shadow mx-auto p-0">
+    <div><h1 class="alert alert-primary text-center p-1">ग्रेच्‍युटी का आंकलन</h1></div>
+    <div class="p-4">
     <form action="calcu">           
         <label class="form-label">मूल वेतन प्रतिमाह :</label><br>
-        <input type="text" class="form-control" name="basic" id="">
+        <input type="text" class="form-control" name="basic" id="" autocomplete="off">
         <label class="form-label">वर्ष : </label><br>
-        <input type="text" name="year" class="form-control" id=""><br>        
+        <input type="text" name="year" class="form-control" id="" autocomplete="off"><br>        
         <input class="btn btn-outline-success btn-block"type="submit" value="Submit">        
     </form>
+    </div>
+    </div>
+    </div>
 
 <br><hr>
 
